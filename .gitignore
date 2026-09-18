@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Lockfiles — kept out so the kit stays package-manager-agnostic
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# React Router generated types
+.react-router/
+
+# Vite / editor / OS cruft
+.vite/
+*.local
+.DS_Store
+*.log
+.idea/
+.vscode/
