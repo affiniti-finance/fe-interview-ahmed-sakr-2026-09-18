@@ -25,7 +25,7 @@ export interface Transaction {
   id: string;
   /** Merchant or transfer label shown in the list. */
   description: string;
-  /** Signed integer cents. Negative = debit/charge, positive = credit/deposit. */
+  /** Signed integer cents. Positive = debit/charge, negative = credit/deposit. */
   amountCents: number;
   /** ISO 4217 currency code. All seed rows are USD, but the field is modeled. */
   currency: string;

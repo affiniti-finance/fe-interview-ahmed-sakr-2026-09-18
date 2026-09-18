@@ -8,7 +8,7 @@ interface AccountSummaryProps {
 export function AccountSummary({ transactions }: AccountSummaryProps) {
   const balanceCents = transactions
     .filter((t) => t.status === 'posted')
-    .reduce((sum, t) => sum + Math.abs(t.amountCents), 0);
+    .reduce((sum, t) => sum + t.amountCents, 0);
 
   const pendingAuthCents = transactions
     .filter((t) => t.status === 'pending' && t.amountCents < 0)

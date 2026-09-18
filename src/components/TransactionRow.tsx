@@ -1,4 +1,5 @@
 import { formatCents } from '../lib/money';
+import { TYPE_LABELS } from '../lib/transactionOptions';
 import type { Transaction } from '../types';
 
 interface TransactionRowProps {
@@ -42,6 +43,7 @@ export function TransactionRow({
           {transaction.status}
         </span>
       </td>
+      <td className="txn-type">{TYPE_LABELS[transaction.type]}</td>
       <td className="txn-date">{formatDate(transaction.createdAt)}</td>
       <td
         className={
